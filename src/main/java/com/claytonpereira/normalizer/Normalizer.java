@@ -47,6 +47,10 @@ public class Normalizer {
         return 1.0 - ((double) levenshteinDist / maxLen);
     }
 
+    // TODO: This main method is for demonstration and testing purposes.
+    // It shows how to use the Normaliser class to normalize job titles.
+    // You can uncomment and run this method to see how the normalization works.
+    // Remove or comment out this method if not needed in the final library.
    /* public static void main(String[] args) {
         Normalizer normalizer = new Normalizer();
         String[] jobTitles = {"Java engineer", "C# engineer", "Chief Accountant"};
