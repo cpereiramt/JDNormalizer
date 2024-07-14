@@ -5,7 +5,6 @@ import org.apache.commons.text.similarity.LevenshteinDistance;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class Normalizer {
     private static final Map<String, String> NORMALIZED_TITLES = new HashMap<>();
 
