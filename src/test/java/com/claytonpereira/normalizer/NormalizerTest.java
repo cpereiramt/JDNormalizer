@@ -15,6 +15,8 @@ import org.junit.jupiter.api.Test;
             assertEquals("Software engineer", normalizer.normalize("C# engineer"));
             assertEquals("Accountant", normalizer.normalize("Accountant"));
             assertEquals("Accountant", normalizer.normalize("Chief Accountant"));
+            assertEquals("No close match found", normalizer.normalize("Unknown Job"));
+
         }
     }
 
