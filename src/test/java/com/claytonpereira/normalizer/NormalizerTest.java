@@ -11,10 +11,10 @@ import org.junit.jupiter.api.Test;
         public void testNormalise() {
             Normalizer normalizer = new Normalizer();
 
-            assertEquals("Software engineer", normalizer.normalise("Java engineer"));
-            assertEquals("Software engineer", normalizer.normalise("C# engineer"));
-            assertEquals("Accountant", normalizer.normalise("Accountant"));
-            assertEquals("Accountant", normalizer.normalise("Chief Accountant"));
+            assertEquals("Software engineer", normalizer.normalize("Java engineer"));
+            assertEquals("Software engineer", normalizer.normalize("C# engineer"));
+            assertEquals("Accountant", normalizer.normalize("Accountant"));
+            assertEquals("Accountant", normalizer.normalize("Chief Accountant"));
         }
     }
 

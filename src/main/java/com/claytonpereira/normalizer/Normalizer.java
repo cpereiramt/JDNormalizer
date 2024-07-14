@@ -17,7 +17,7 @@ public class Normalizer {
 
     private final LevenshteinDistance levenshtein = new LevenshteinDistance();
 
-    public String normalise(String jobTitle) {
+    public String normalize(String jobTitle) {
         String normalizedTitle = null;
         double highestScore = 0.0;
 
@@ -43,7 +43,7 @@ public class Normalizer {
         String[] jobTitles = {"Java engineer", "C# engineer", "Chief Accountant"};
 
         for (String jt : jobTitles) {
-            System.out.println("Input: " + jt + " => Normalized: " + normalizer.normalise(jt));
+            System.out.println("Input: " + jt + " => Normalized: " + normalizer.normalize(jt));
         }
     }
 }
