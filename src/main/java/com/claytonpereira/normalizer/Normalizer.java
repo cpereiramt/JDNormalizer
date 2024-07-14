@@ -5,6 +5,9 @@ import org.apache.commons.text.similarity.LevenshteinDistance;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Normalizer class, that has the method normalize to normalize the given Job title
+ */
 public class Normalizer {
     private static final Map<String, String> NORMALIZED_TITLES = new HashMap<>();
 
@@ -17,6 +20,11 @@ public class Normalizer {
 
     private final LevenshteinDistance levenshtein = new LevenshteinDistance();
 
+    /**
+     *
+     * @param jobTitle job title to be normalized
+     * @return String with normalized title
+     */
     public String normalize(String jobTitle) {
         String normalizedTitle = null;
         double highestScore = 0.0;
@@ -38,12 +46,12 @@ public class Normalizer {
         return 1.0 - ((double) levenshteinDist / maxLen);
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Normalizer normalizer = new Normalizer();
         String[] jobTitles = {"Java engineer", "C# engineer", "Chief Accountant"};
 
         for (String jt : jobTitles) {
             System.out.println("Input: " + jt + " => Normalized: " + normalizer.normalize(jt));
         }
-    }
+    }*/
 }
