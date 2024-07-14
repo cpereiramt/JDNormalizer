@@ -64,5 +64,5 @@ You can use the generated JAR file as a dependency in your own projects.
             System.out.println("Input: " + jt + " => Normalized: " + normalizer.normalize(jt));
         }
     }
-``
+```
 

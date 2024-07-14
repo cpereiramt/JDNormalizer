@@ -10,6 +10,7 @@ import java.util.Map;
  */
 public class Normalizer {
     private static final Map<String, String> NORMALIZED_TITLES = new HashMap<>();
+    private static final double THRESHOLD = 0.5;
 
     static {
         NORMALIZED_TITLES.put("Architect", "Architect");
@@ -26,12 +27,12 @@ public class Normalizer {
      * @return String with normalized title
      */
     public String normalize(String jobTitle) {
-        String normalizedTitle = null;
+        String normalizedTitle = "No close match found";
         double highestScore = 0.0;
 
         for (String key : NORMALIZED_TITLES.keySet()) {
             double score = calculateSimilarity(jobTitle, key);
-            if (score > highestScore) {
+            if (score > THRESHOLD) {
                 highestScore = score;
                 normalizedTitle = NORMALIZED_TITLES.get(key);
             }
