@@ -48,9 +48,9 @@ You can use the generated JAR file as a dependency in your own projects.
 <dependency>
     <groupId>com.claytonpereira</groupId>
     <artifactId>JDNormalizer</artifactId>
-    <version>1.1.0</version>
+    <version><project-version></version>
     <scope>system</scope>
-    <systemPath>${project.basedir}/libs/JDNormalizer-1.1.0.jar</systemPath>
+    <systemPath>${project.basedir}/libs/JDNormalizer-<project-version>.jar</systemPath>
 </dependency>
  ```
 ### Usage
